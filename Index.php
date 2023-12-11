@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<?php include "header.php"; ?>
 <body>
     <?php
         session_start();
+        include "header.php";
+
         $server = "localhost";
         $username = "root";
         $password = "";
@@ -24,7 +25,6 @@
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    $_SESSION['id'] = $row['id'];
                     $car = '
                         <div class="services__wrapper">
                             <div class="services__card">
@@ -33,7 +33,7 @@
                                 <h2>' .$row['price']. 'kr' .'</h2>
                                 <h3>' .$row['description']. '</h3>
                                 <h2>' .$row['Location']. '</h2>
-                            <div class="services__btn"><a href="car.php?id='.$_SESSION['id'].'">Köp</a></div>
+                            <div class="services__btn"><a href="car.php?id='.$row['id'].'">Köp</a></div>
                         </div>
                     ';
                     echo $car;
@@ -46,3 +46,4 @@
 
 </body>
 <?php   $conn->close(); ?>
+<script type="text/javascript" src="js\script.js"></script>

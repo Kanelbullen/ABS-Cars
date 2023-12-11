@@ -22,9 +22,39 @@
           <li class="navbar__item">
             <a href="index.php#services" class="navbar__links" id="services-page">About Us</a>
           </li>
-          <li class="navbar__btn">
-            <a href="" class="button">Profile</a>
+          <!-- <li class="navbar__btn">
+            <a href="add_car.php" class="button">Profile</a>
+          </li> -->
+          <?php
+          error_reporting(0);
+          session_start();
+
+          // logout the user and destroys all current imformation
+          if (isset($_GET['logout'])){
+            unset($_SESSION['email']);
+            session_destroy();
+            header('location: index.php');
+            exit;
+          }
+          
+          if (empty($_SESSION['email'])) {
+          ?>
+          <li class="navbar__item">
+            <a href="login.php" class="navbar__links" id="services-page">Log In</a>
           </li>
+          <li class="navbar__btn">
+            <a href="signup.php" class="button" id="signup">Sign Up</a>
+          <?php
+          }
+          
+          else if (!empty($_SESSION['email'])){
+          ?>
+          <li class="navbar__btn">
+            <a href="profile.php" class="button">Profile</a>
+          </li>
+          <?php
+          }
+          ?>
         </ul>
       </div>
     </nav>
