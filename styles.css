@@ -16,6 +16,10 @@
     font-family: 'Kumbh Sans', sans-serif;
     scroll-behavior: smooth;
 }
+
+body {
+  background-color: #131313;
+}
   
 .navbar {
     background: #131313;
@@ -203,13 +207,11 @@
 }
 
 .services {
-    background: #131313;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 10rem 0;
+  width: 1024px;
+  max-width: 100%;
+  margin-inline: auto;
+  overflow-y: auto;
+  padding-inline: 1.5rem;
 }
 
 .services h1 {
@@ -224,22 +226,22 @@
 }
 
 .services__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Updated line */
 }
 
 .services__card {
-    margin: 10px;
-    height: 425px;
-    width: 300px;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: var(--bg);
-    color-image: var(--bg);
-    transition: 0.3s ease-in;
+  margin: 10px;
+  margin-bottom: 20px; /* Adjust as needed */
+  height: 425px;
+  width: 300px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--bg);
+  color-image: var(--bg);
+  transition: 0.3s ease-in;
 }
 
 .services__card h2 {
@@ -276,12 +278,6 @@
     transform: scale(1.075);
     transition: 0.3s ease-in;
     cursor: pointer;
-    }
-
-    @media screen and (max-width: 1300px) {
-    .services__wrapper {
-        grid-template-columns: 1fr 1fr;
-    }
     }
 
     @media screen and (max-width: 768px) {

@@ -21,18 +21,18 @@
 
     <div class="services" id="services">
         <h1>Our Cars</h1>
+        <div class="services__wrapper">
         <?php 
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
                     $car = '
-                        <div class="services__wrapper">
-                            <div class="services__card">
-                                <img src="' .$row['image']. '" alt="Car" class="services__img">
-                                <h1>' .$row['name']. '</h1>
-                                <h2>' .$row['price']. 'kr' .'</h2>
-                                <h3>' .$row['description']. '</h3>
-                                <h2>' .$row['Location']. '</h2>
+                        <div class="services__card">
+                            <img src="' .$row['image']. '" alt="Car" class="services__img">
+                            <h1>' .$row['name']. '</h1>
+                            <h2>' .$row['price']. 'kr' .'</h2>
+                            <h3>' .$row['description']. '</h3>
+                            <h2>' .$row['Location']. '</h2>
                             <div class="services__btn"><a href="car.php?id='.$row['id'].'">Köp</a></div>
                         </div>
                     ';
@@ -42,6 +42,7 @@
                 echo "0 results";
             }
         ?>
+        </div>
     </div>
 
 </body>

@@ -32,7 +32,8 @@
                         <h3>' . $row['description'] . '</h3>
                         <h2>' . $row['Location'] . '</h2>
                     </div>
-                </div>';
+                </div>
+                ';
         } else {
             echo "Car not found in the database";
         }
