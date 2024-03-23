@@ -22,9 +22,6 @@
           <li class="navbar__item">
             <a href="index.php#services" class="navbar__links" id="services-page">About Us</a>
           </li>
-          <!-- <li class="navbar__btn">
-            <a href="add_car.php" class="button">Profile</a>
-          </li> -->
           <?php
           error_reporting(0);
           session_start();
