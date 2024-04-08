@@ -17,6 +17,10 @@
     scroll-behavior: smooth;
 }
 
+h1 {
+  color: whitesmoke;
+}
+
 body {
   background-color: #131313;
 }
@@ -465,6 +469,16 @@ body {
   transition: all 1s;
 }
 
+.profile{
+  background: #000000;
+  background: linear-gradient(to right, #161616, #000000);
+  padding: 20px 0;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  color: white;
+}
+
 .logout{
     display: flex;
     justify-content: center;
@@ -504,4 +518,70 @@ body {
     margin-bottom: -1.5%;
     width: 2%;
     height: 2%;
+  }
+  #profile_img{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 13%;
+    height: 25%;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+  }
+  
+  #edit_profile_img{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 13%;
+    height: 25%;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    margin: 0;
+  }
+  
+  input[type=file]{
+    color: #00c3ff;
+    width: 20%;
+    height: 5%;
+    background-color: #ffffff;
+  }
+  
+  #file{
+    display: none;
+  }
+  
+  @keyframes smooth {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #img_sub{
+    display: block;
+    animation: smooth 1s ease;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 2%;
+    width: 10%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: rgb(22, 230, 67);
+    color: #fff;
+  }
+  .button_pro{
+    display: flex;
+    flex-direction: row;
+    margin-right: 5%;
+    height: 10%;
+    justify-content: right;
   }

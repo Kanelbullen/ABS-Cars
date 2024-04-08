@@ -60,9 +60,11 @@
     if (isset($_POST['login'])) {
       $email = $_POST['email'];
       $password = $_POST['password'];
+      $user_id = $_POST['id'];
       if (login($conn, $email, $password)) {
         echo "Login successful!";
         $_SESSION["email"] = $email;
+        $_SESSION["id"] = $user_id;
         header('Location: profile.php');
       }
       elseif(!mysqli_num_rows($verifyEmail)){

@@ -31,6 +31,7 @@
                         <h2>' . $row['price'] . 'kr' . '</h2>
                         <h3>' . $row['description'] . '</h3>
                         <h2>' . $row['Location'] . '</h2>
+                        <div class="services__btn"><a href="buy_car.php?id='.$row['id'].'">Köp</a></div>
                     </div>
                 </div>
                 ';

@@ -17,7 +17,7 @@
             <a href="index.php#home" class="navbar__links" id="home-page">Home</a>
           </li>
           <li class="navbar__item">
-            <a href="index.php#about" class="navbar__links" id="about-page">Cars</a>
+            <a href="add_car.php" class="navbar__links" id="about-page">Sell Cars</a>
           </li>
           <li class="navbar__item">
             <a href="index.php#services" class="navbar__links" id="services-page">About Us</a>
